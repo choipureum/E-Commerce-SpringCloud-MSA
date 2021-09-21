@@ -4,6 +4,12 @@
 - [x] : Spring-Cloud-Netfilx-Eureka
 - [ ] : Spring-Cloud-Netfilx-Zuul
 - [x] : Spring-Cloud-Gateway
+- [ ] : JPA
+- [ ] : JWT
+- [ ] : Rabbit MQ
+- [ ] : Kafka
+- [ ] : CircuitBreaker
+- [ ] : Zipkin
 
 ## License
 - Code: [MIT](./LICENSE) © [PuReum Choi](https://blue-boy.tistory.com/)
