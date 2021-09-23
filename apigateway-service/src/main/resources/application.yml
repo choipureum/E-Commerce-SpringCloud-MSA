@@ -3,8 +3,8 @@ server:
 
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZome: http://192.168.1.5:8761/eureka
 
@@ -21,7 +21,8 @@ spring:
             postLogger: true
       routes:
         - id: first-service
-          uri: http://192.168.1.5:8081/first-service/**
+          #uri: http://192.168.1.5:8081/first-service/**
+          uri: lb://MY-FIRST-SERVICE #유레카에서 매핑
           predicates:
             - Path=/first-service/**
           filters:
@@ -29,7 +30,8 @@ spring:
 #            - AddResponseHeader=first-request, first-response-header2
             - CustomFilter
         - id: second-service
-          uri: http://192.168.1.5:8082/second-service/**
+          #uri: http://192.168.1.5:8082/second-service/**
+          uri: lb://MY-SECOND-SERVICE
           predicates:
             - Path=/second-service/**
           filters:

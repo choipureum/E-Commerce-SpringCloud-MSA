@@ -1,9 +1,13 @@
 server:
-  port: 8081
+  port: 0 #0포트는 랜덤포트
 spring:
   application:
     name: my-first-service
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZome: http://192.168.1.5:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
