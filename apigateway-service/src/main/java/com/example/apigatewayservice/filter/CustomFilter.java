@@ -19,7 +19,7 @@ public class CustomFilter extends AbstractGatewayFilterFactory<CustomFilter.Conf
     @Override
     public GatewayFilter apply(Config config) {
         //Custom Pre filter
-        return (exchange, chain) -> {
+        return ((exchange, chain) -> {
             ServerHttpRequest request = exchange.getRequest();
             ServerHttpResponse response = exchange.getResponse();
 
@@ -29,7 +29,7 @@ public class CustomFilter extends AbstractGatewayFilterFactory<CustomFilter.Conf
             return chain.filter(exchange).then(Mono.fromRunnable(()->{
                 log.info("Custom POST filter: response code -> {}", response.getStatusCode());
             }));
-        };
+        });
     }
 
     public static class Config{
