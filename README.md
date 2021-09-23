@@ -2,7 +2,7 @@
 
 ## Content
 - [x] : Spring-Cloud-Netfilx-Eureka
-- [ ] : Spring-Cloud-Netfilx-Zuul
+- [x] : Spring-Cloud-Netfilx-Zuul
 - [x] : Spring-Cloud-Gateway
 - [ ] : JPA
 - [ ] : JWT
