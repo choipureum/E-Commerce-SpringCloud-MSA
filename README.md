@@ -4,7 +4,7 @@
 - [x] : Spring-Cloud-Netfilx-Eureka
 - [x] : Spring-Cloud-Netfilx-Zuul
 - [x] : Spring-Cloud-Gateway
-- [ ] : JPA
+- [x] : JPA
 - [ ] : JWT
 - [ ] : Rabbit MQ
 - [ ] : Kafka
