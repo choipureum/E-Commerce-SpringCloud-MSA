@@ -1,0 +1,3 @@
+09-26 22:51:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM Users [42102-176]
